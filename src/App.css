@@ -1,0 +1,129 @@
+/* Root variables for easy customization */
+:root {
+  --cell-color: #ff4500;
+  --dead-cell-color: rgba(255, 255, 255, 0.05);
+  --dead-cell-hover-color: rgba(255, 69, 0, 0.3);
+  --cell-size: 35px;
+}
+
+/* Global styles */
+body,
+html {
+  height: 100%;
+  font-family: "Orbitron", sans-serif;
+  background-color: #000814;
+  background-image: url("path_to_space_image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the game grid */
+.container {
+  overflow: hidden;
+  border-radius: 4rem;
+  border: 1px dashed #6c6c6c;
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: var(--dead-cell-color);
+  transition-property: background-color, transform;
+  transition: background-color 0.15s;
+  border-radius: 5px;
+}
+
+.cell:not(.cell--alive):hover {
+  background-color: var(--dead-cell-hover-color);
+}
+
+.cell--alive {
+  background-color: var(--cell-color);
+  animation: pulse 500ms infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+/* Styles for the control buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background-color: rgba(12, 12, 36, 0.8);
+}
+
+button {
+  font-family: "Orbitron", sans-serif;
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition-duration: 0.15s;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #1a1a2e;
+  gap: 8px;
+  min-width: 110px;
+}
+
+button:hover {
+  border: 1px solid #888;
+  background-color: #2a2a40;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 5%;
+}
+
+.creator-link {
+  font-size: 0.8rem;
+  margin-left: 20px;
+}
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is on top of other elements */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
