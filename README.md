@@ -1,4 +1,4 @@
-Sure thing! Let's sprinkle in some emojis and adjust the command to `npm run dev`. Here's the updated README:
+Of course! Here's the updated README with the live link:
 
 ---
 
@@ -26,7 +26,7 @@ Conway's Game of Life is a cellular automaton devised by the British mathematici
    ```
 2. Navigate to the project directory:
    ```bash
-   cd conways-game-of-life
+   cd Conways-Game-of-Life
    ```
 3. Install the dependencies:
    ```bash
@@ -38,6 +38,10 @@ Conway's Game of Life is a cellular automaton devised by the British mathematici
    ```
 
 Now, open your browser and navigate to `http://localhost:3000`. Enjoy the mesmerizing patterns! 🌀
+
+## Live Demo 🌐
+
+Experience the game in action! Check out the live demo [here](https://conways-game-of-life-cmc.netlify.app/).
 
 ## Contribute 🤝
 
