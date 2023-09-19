@@ -1,0 +1,25 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cell.alive {
+  background-color: black;
+}
+
+.cell.dead {
+  background-color: white;
+}
