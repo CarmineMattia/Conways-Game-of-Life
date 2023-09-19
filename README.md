@@ -1,7 +1,3 @@
-Of course! Here's the updated README with the live link:
-
----
-
 # Conway's Game of Life 🎲
 
 Welcome to the Conway's Game of Life! This is a classic mathematical game that showcases the beauty of cellular automata. Dive in and watch how simple rules can lead to complex patterns and behaviors. 🌌
